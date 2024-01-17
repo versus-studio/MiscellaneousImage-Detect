@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+    <title>MiscellaneousImage-Detect</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">MIDetect</a></h1>
+            <ul>
+                <li>
+                    <a href="#Home" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#Samples">Samples</a>
+                </li>
+                <li>
+                    <a href="#Details">Details</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="landing-page" id="Home">
+            <div class="landing-container">
+                <div class="landing-left-content">
+                    <h1>miscellaneous Image Detect</h1>
+                    <h2>Upload an Image to test for possible deepfakes</h2>
+                    <a href="#" class="get-start-btn">Get Started</a>
+                </div>
+                <div class="landing-right-container">
+                    <img src="images/DeepfakeDetection_Facebook.gif" alt="DeepfakeDetection_Facebook">
+                    <p class="credits">Image credits: <a
+                            href="https://ai.meta.com/blog/deepfake-detection-challenge-results-an-open-initiative-to-advance-ai/"
+                            target="_blank">Facebook AI</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="samples-container" id="Samples">
+            <div class="s-content-container">
+                <h2>Prediction Results</h2>
+                <p>Sample prediction results provided by our deepfake detection model</p>
+            </div>
+            <div class="slide-wrapper">
+                <div class="slider">
+                    <div class="border-radius"></div>
+                    <img class="slide" id="slide-1" src="images/gallery/gallery-1.png" alt>
+                    <img class="slide" id="slide-2" src="images/gallery/gallery-2.png" alt>
+                    <img class="slide" id="slide-3" src="images/gallery/gallery-3.png" alt>
+                    <img class="slide" id="slide-4" class="active" src="images/gallery/gallery-10.png" alt>
+                    <img class="slide" id="slide-5" src="images/gallery/gallery-4.png" alt>
+                    <img class="slide" id="slide-6" src="images/gallery/gallery-5.png" alt>
+                    <img class="slide" id="slide-7" src="images/gallery/gallery-6.png" alt>
+                    <img class="slide" id="slide-8" src="images/gallery/gallery-7.png" alt>
+                    <img class="slide" id="slide-9" src="images/gallery/gallery-8.png" alt>
+                    <img class="slide" id="slide-10" src="images/gallery/gallery-9.png" alt>
+                    <img class="slide" id="slide-11" src="images/gallery/gallery-11.png" alt>
+                    <img class="slide" id="slide-12" src="images/gallery/gallery-12.png" alt>
+                </div>
+                <div class="slider-nav">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                    <span class="dot" onclick="goToSlide(3)"></span>
+                    <span class="dot" onclick="goToSlide(4)"></span>
+                    <span class="dot" onclick="goToSlide(5)"></span>
+                    <span class="dot" onclick="goToSlide(6)"></span>
+                    <span class="dot" onclick="goToSlide(7)"></span>
+                    <span class="dot" onclick="goToSlide(8)"></span>
+                    <span class="dot" onclick="goToSlide(9)""></span>
+                    <span class=" dot" onclick="goToSlide(10)""></span>
+                    <span class=" dot" onclick="goToSlide(11)""></span>
+                </div>
+            </div>
+        </section>
+        <section class=" details-container" id="Details">
+                        <div class="content">
+                            details
+                        </div>
+        </section>
+    </main>
+    <footer>
+        <p>Designed By <a href="https://www.instagram.com/code_with_vd/">Code_With_VD</a></p>
+    </footer>
+    <script src="image-slider.js"></script>
+</body>
+
+</html>
