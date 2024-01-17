@@ -243,7 +243,7 @@ header nav ul li a.active
     width: 250px;
     height: 480px;
     border-radius: 30px;
-    border: 10px solid #5777ba;
+    border: 10px solid #4adac2;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -258,7 +258,7 @@ header nav ul li a.active
     z-index: 2;
 }
 .slider-nav span.active{
-    background-color: #2e62d1;
+    background-color: #57baad;
 }
 
 .slider-nav span{
