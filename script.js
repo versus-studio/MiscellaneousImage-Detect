@@ -22,12 +22,27 @@ window.onscroll = () => {
   });
 };
 
+
+// Upload images
 function uploadLinks() {
     document.getElementById('uploadPopup').style.display = 'block';
 }
 
 function closePopup() {
-    document.getElementById('uploadPopup').style.display = 'none';
+    const uploadPopup = document.getElementById('uploadPopup');
+    const imageInput = document.getElementById('imageInput');
+    const selectedImage = document.getElementById('selectedImage');
+
+    uploadPopup.style.display = 'none';
+
+    // Reset the value of the file input after a short delay
+    setTimeout(function () {
+        imageInput.value = '';
+    }, 100);
+
+    // Clear the image source and hide the image immediately
+    selectedImage.src = '';
+    selectedImage.style.display = 'none';
 }
 
 function displayImage() {
@@ -38,8 +53,12 @@ function displayImage() {
         const reader = new FileReader();
         reader.onload = function (e) {
             image.src = e.target.result;
+            image.style.display = 'block';
         };
         reader.readAsDataURL(input.files[0]);
+    } else {
+        image.src = '';
+        image.style.display = 'none';
     }
 }
 

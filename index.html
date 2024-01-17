@@ -19,7 +19,7 @@
             <span class="close" onclick="closePopup()"><i class="fas fa-close"></i></span>
             <input type="file" accept=".png, .jpg" id="imageInput" onchange="displayImage()">
             <img id="selectedImage" alt>
-            <input type="submit" value="Check Result" class="result-btn">
+            <input type="submit" value="Check Result" onclick="alert(`Sorry!, We are under development. There are some bugs in it. We're fixing them currently.`)" class="result-btn">
         </div>
     </div>
     <header>
@@ -60,8 +60,8 @@
                 <p>Sample prediction results provided by our deepfake detection model</p>
             </div>
             <div class="slide-wrapper">
+                <div class="border-radius"></div>
                 <div class="slider">
-                    <div class="border-radius"></div>
                     <img class="slide" id="slide-1" src="images/gallery/gallery-1.png" alt>
                     <img class="slide" id="slide-2" src="images/gallery/gallery-2.png" alt>
                     <img class="slide" id="slide-3" src="images/gallery/gallery-3.png" alt>
@@ -75,19 +75,19 @@
                     <img class="slide" id="slide-11" src="images/gallery/gallery-11.png" alt>
                     <img class="slide" id="slide-12" src="images/gallery/gallery-12.png" alt>
                 </div>
-                <div class="slider-nav">
-                    <span class="dot active" onclick="goToSlide(0)"></span>
-                    <span class="dot" onclick="goToSlide(1)"></span>
-                    <span class="dot" onclick="goToSlide(2)"></span>
-                    <span class="dot" onclick="goToSlide(3)"></span>
-                    <span class="dot" onclick="goToSlide(4)"></span>
-                    <span class="dot" onclick="goToSlide(5)"></span>
-                    <span class="dot" onclick="goToSlide(6)"></span>
-                    <span class="dot" onclick="goToSlide(7)"></span>
-                    <span class="dot" onclick="goToSlide(8)"></span>
-                    <span class="dot" onclick="goToSlide(9)""></span>
-                    <span class=" dot" onclick="goToSlide(10)""></span>
-                    <span class=" dot" onclick="goToSlide(11)""></span>
+                <div class="slider">
+                    <img class="slide" id="slide-1" src="images/gallery/gallery-1.png" alt>
+                    <img class="slide" id="slide-2" src="images/gallery/gallery-2.png" alt>
+                    <img class="slide" id="slide-3" src="images/gallery/gallery-3.png" alt>
+                    <img class="slide" id="slide-4" class="active" src="images/gallery/gallery-10.png" alt>
+                    <img class="slide" id="slide-5" src="images/gallery/gallery-4.png" alt>
+                    <img class="slide" id="slide-6" src="images/gallery/gallery-5.png" alt>
+                    <img class="slide" id="slide-7" src="images/gallery/gallery-6.png" alt>
+                    <img class="slide" id="slide-8" src="images/gallery/gallery-7.png" alt>
+                    <img class="slide" id="slide-9" src="images/gallery/gallery-8.png" alt>
+                    <img class="slide" id="slide-10" src="images/gallery/gallery-9.png" alt>
+                    <img class="slide" id="slide-11" src="images/gallery/gallery-11.png" alt>
+                    <img class="slide" id="slide-12" src="images/gallery/gallery-12.png" alt>
                 </div>
             </div>
         </section>

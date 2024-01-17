@@ -130,7 +130,7 @@ header nav ul li a.active
 #selectedImage {
     max-width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin: 10px;
 }
 
 
@@ -245,31 +245,42 @@ header nav ul li a.active
     font-size: 18px;
 }
 
-.samples-container .slide-wrapper{
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.slide-wrapper{
+    overflow: hidden;
+    width: 100%;
+    padding: 60px 0;
+    white-space: nowrap;
     position: relative;
-    max-width: 100%;
-    margin: 0 auto;
 }
 
-.samples-container .slide-wrapper .slider{
-    display: flex;
-    object-fit: cover;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    gap: 20px;
+.slide-wrapper:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: linear-gradient(to left, rgba(255, 255, 255, 0.6), rgba(255, 0, 0, 05)    );
+    z-index: 2;
 }
 
-::-webkit-scrollbar{
-    display: none;
+.slider{
+    display: inline-block;
+    animation: 35s slide infinite linear;
 }
 
 .slider img{
-    flex: 1 1 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
+    padding: 10px;
 }
 
 
@@ -278,8 +289,8 @@ header nav ul li a.active
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 250px;
-    height: 480px;
+    width: 100%;
+    height: 500px;
     border-radius: 30px;
     border: 10px solid #4adac2;
     box-sizing: border-box;
