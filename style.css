@@ -17,7 +17,6 @@ header {
     height: 72px;
     transition: all 0.5s;
     z-index: 997;
-    transition: all 0.5s;
     padding: 15px 0;
     background-color: rgba(177, 177, 177, 0.79);
 }
@@ -67,6 +66,8 @@ header nav ul li a.active
     border-radius: 10px;
 }
 
+/* ... Existing styles ... */
+
 .popup {
     display: none;
     position: fixed;
@@ -75,6 +76,7 @@ header nav ul li a.active
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
 }
 
 .popup-content {
@@ -82,7 +84,7 @@ header nav ul li a.active
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 50px;
     background: #fff;
     border-radius: 5px;
     text-align: center;
@@ -92,7 +94,43 @@ header nav ul li a.active
     position: absolute;
     top: 10px;
     right: 10px;
+    font-size: 25px;
+    padding: 0 10px;
+    animation: close-anime .5s ease;
+}
+
+.close:hover {
+    animation: close-anim .5s ease;
     cursor: pointer;
+}
+
+@keyframes close-anim {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes close-anime{
+    from{
+        transform: rotate(270deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+/* Additional styles for file input and selected image */
+#imageInput {
+    margin-top: 10px;
+}
+
+#selectedImage {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
 }
 
 
@@ -145,7 +183,7 @@ header nav ul li a.active
     font-family: 'Raleway', sans-serif;
 }
 
-.landing-page .get-start-btn{
+.landing-page .get-start-btn, .popup-content .result-btn{
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
@@ -156,7 +194,7 @@ header nav ul li a.active
     transition: all .3s ease-in-out;
 }
 
-.landing-page .get-start-btn:hover{
+.landing-page .get-start-btn:hover, .result-btn:hover{
     cursor: pointer;
     background-color: #c4c4c4c4;
     color: #fefefe;

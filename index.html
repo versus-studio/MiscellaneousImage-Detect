@@ -16,9 +16,10 @@
 <body>
     <div id="uploadPopup" class="popup">
         <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
+            <span class="close" onclick="closePopup()"><i class="fas fa-close"></i></span>
             <input type="file" accept=".png, .jpg" id="imageInput" onchange="displayImage()">
-            <img id="selectedImage" alt="Selected Image">
+            <img id="selectedImage" alt>
+            <input type="submit" value="Check Result" class="result-btn">
         </div>
     </div>
     <header>
@@ -43,7 +44,7 @@
                 <div class="landing-left-content">
                     <h1>Miscellaneous Image Detect</h1>
                     <h2>Upload an Image to test for possible deepfakes</h2>
-                    <a href="#" class="get-start-btn" id="upload">Get Started</a>
+                    <a href="#upload-image" onclick="uploadLinks()" class="get-start-btn" id="upload">Get Started</a>
                 </div>
                 <div class="landing-right-container">
                     <img src="images/DeepfakeDetection_Facebook.gif" alt="DeepfakeDetection_Facebook">
