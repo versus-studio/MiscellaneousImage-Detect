@@ -4,14 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/caa13318f3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script defer src="upload-script.js"></script>
     <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
     <title>MiscellaneousImage-Detect</title>
 </head>
 
 <body>
+    <div id="uploadPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <input type="file" accept=".png, .jpg" id="imageInput" onchange="displayImage()">
+            <img id="selectedImage" alt="Selected Image">
+        </div>
+    </div>
     <header>
         <nav>
             <h1><a href="index.html">MIDetect</a></h1>
@@ -32,9 +41,9 @@
         <section class="landing-page" id="Home">
             <div class="landing-container">
                 <div class="landing-left-content">
-                    <h1>miscellaneous Image Detect</h1>
+                    <h1>Miscellaneous Image Detect</h1>
                     <h2>Upload an Image to test for possible deepfakes</h2>
-                    <a href="#" class="get-start-btn">Get Started</a>
+                    <a href="#" class="get-start-btn" id="upload">Get Started</a>
                 </div>
                 <div class="landing-right-container">
                     <img src="images/DeepfakeDetection_Facebook.gif" alt="DeepfakeDetection_Facebook">
@@ -81,14 +90,35 @@
                 </div>
             </div>
         </section>
-        <section class=" details-container" id="Details">
-                        <div class="content">
-                            details
-                        </div>
+        <section class="details-container" id="Details">
+            <div class="content">
+                <div class="content-1">
+                    <h2>Experimental Results</h2>
+                    <p>We have performed extensive training and hyperparameter tuning, such as comparing different EfficientNet models, number of convolution layers, weights, data augmentations, dropout rates, and regularizers. In the end, the following settings give us the best results:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Input Size: 128 x 128</li>
+                        <li><i class="fas fa-check"></i> Batch Size: 32</li>
+                        <li><i class="fas fa-check"></i>  Optimizer: Adam
+                        </li>
+                        <li><i class="fas fa-check"></i>  Learning Rate: 0.0001</li>
+                        <li><i class="fas fa-check"></i> Dropout Rate: 0.5</li>
+                        <li><i class="fas fa-check"></i>  Regularization: L2 with 0.001 rate</li>
+                    </ul>
+                    <img src="/images/results.png" alt="Graph" class="graph">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Accuracy: 92.36%</li>
+                        <li><i class="fas fa-check"></i> Precision: 96.95%</li>
+                        <li><i class="fas fa-check"></i> Recall: 95.94%</li>
+                        <li><i class="fas fa-check"></i>   We have achieved better results than XceptionNet and MesoNet based on a <a href="https://kaldir.vc.in.tum.de/faceforensics_benchmark/" target="_blank" rel="noopener noreferrer">public deepfake detection benchmark</a></li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>Designed By <a href="https://www.instagram.com/code_with_vd/">Code_With_VD</a></p>
+        <p><a href="https://github.com/vipul-dalal/MiscellaneousImage-Detect" target="_blank"><i class="fab fa-github"></i> Github</a>
+        </p>
+        <p>Designed By <a href="https://www.instagram.com/code_with_vd/" target="_blank">Code_With_VD</a></p>
     </footer>
     <script src="image-slider.js"></script>
 </body>
