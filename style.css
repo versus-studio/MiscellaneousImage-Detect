@@ -294,17 +294,20 @@ header nav ul li a.active {
     top: 0;
     width: 250px;
     height: 100%;
-    z-index: 99;
+    z-index: 3;
 }
 
 .slide-wrapper:before {
     left: 0;
     background: linear-gradient(to left, rgba(250, 250, 250, 0.7), rgb(250, 250, 250));
-    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
 }
 
 .slide-wrapper:after {
     right: 0;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
     background: linear-gradient(to right, rgba(250, 250, 250, 0.7), rgb(250, 250, 250));
 }
 
@@ -332,7 +335,7 @@ header nav ul li a.active {
     border-radius: 30px;
     border: 10px solid #4adac2;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 4;
 }
 
 .slider-nav {
