@@ -17,9 +17,15 @@
     <div id="uploadPopup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup()"><i class="fas fa-close"></i></span>
-            <input type="file" accept=".png, .jpg" id="imageInput" onchange="displayImage()">
+            <div class="actions">
+                <label for="imageInput" class="upload-btn">Choose File
+                    <input type="file" accept=".png, .jpg" id="imageInput" onchange="displayImage()" hidden>
+                </label>
+            </div>
             <img id="selectedImage" alt>
-            <input type="submit" value="Check Result" onclick="alert(`Sorry!, We are under development. There are some bugs in it. We're fixing them currently.`)" class="result-btn">
+            <input type="submit" value="Check Result"
+                onclick="alert(`Sorry!, We are under development. There are some bugs in it. We're fixing them currently.`)"
+                class="result-btn">
         </div>
     </div>
     <header>
@@ -75,53 +81,48 @@
                     <img class="slide" id="slide-11" src="images/gallery/gallery-11.png" alt>
                     <img class="slide" id="slide-12" src="images/gallery/gallery-12.png" alt>
                 </div>
-                <div class="slider">
-                    <img class="slide" id="slide-1" src="images/gallery/gallery-1.png" alt>
-                    <img class="slide" id="slide-2" src="images/gallery/gallery-2.png" alt>
-                    <img class="slide" id="slide-3" src="images/gallery/gallery-3.png" alt>
-                    <img class="slide" id="slide-4" class="active" src="images/gallery/gallery-10.png" alt>
-                    <img class="slide" id="slide-5" src="images/gallery/gallery-4.png" alt>
-                    <img class="slide" id="slide-6" src="images/gallery/gallery-5.png" alt>
-                    <img class="slide" id="slide-7" src="images/gallery/gallery-6.png" alt>
-                    <img class="slide" id="slide-8" src="images/gallery/gallery-7.png" alt>
-                    <img class="slide" id="slide-9" src="images/gallery/gallery-8.png" alt>
-                    <img class="slide" id="slide-10" src="images/gallery/gallery-9.png" alt>
-                    <img class="slide" id="slide-11" src="images/gallery/gallery-11.png" alt>
-                    <img class="slide" id="slide-12" src="images/gallery/gallery-12.png" alt>
-                </div>
             </div>
         </section>
         <section class="details-container" id="Details">
             <div class="content">
                 <div class="content-1">
                     <h2>Experimental Results</h2>
-                    <p>We have performed extensive training and hyperparameter tuning, such as comparing different EfficientNet models, number of convolution layers, weights, data augmentations, dropout rates, and regularizers. In the end, the following settings give us the best results:</p>
+                    <p>We have performed extensive training and hyperparameter tuning, such as comparing different
+                        EfficientNet models, number of convolution layers, weights, data augmentations, dropout rates,
+                        and regularizers. In the end, the following settings give us the best results:</p>
                     <ul>
                         <li><i class="fas fa-check"></i> Input Size: 128 x 128</li>
                         <li><i class="fas fa-check"></i> Batch Size: 32</li>
-                        <li><i class="fas fa-check"></i>  Optimizer: Adam
+                        <li><i class="fas fa-check"></i> Optimizer: Adam
                         </li>
-                        <li><i class="fas fa-check"></i>  Learning Rate: 0.0001</li>
+                        <li><i class="fas fa-check"></i> Learning Rate: 0.0001</li>
                         <li><i class="fas fa-check"></i> Dropout Rate: 0.5</li>
-                        <li><i class="fas fa-check"></i>  Regularization: L2 with 0.001 rate</li>
+                        <li><i class="fas fa-check"></i> Regularization: L2 with 0.001 rate</li>
                     </ul>
                     <img src="./images/results.png" alt="Graph" class="graph">
                     <ul>
                         <li><i class="fas fa-check"></i> Accuracy: 92.36%</li>
                         <li><i class="fas fa-check"></i> Precision: 96.95%</li>
                         <li><i class="fas fa-check"></i> Recall: 95.94%</li>
-                        <li><i class="fas fa-check"></i>   We have achieved better results than XceptionNet and MesoNet based on a <a href="https://kaldir.vc.in.tum.de/faceforensics_benchmark/" target="_blank" rel="noopener noreferrer">public deepfake detection benchmark</a></li>
+                        <li><i class="fas fa-check"></i> We have achieved better results than XceptionNet and MesoNet
+                            based on a <a href="https://kaldir.vc.in.tum.de/faceforensics_benchmark/" target="_blank"
+                                rel="noopener noreferrer">public deepfake detection benchmark</a></li>
                     </ul>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <p><a href="https://github.com/vipul-dalal/MiscellaneousImage-Detect" target="_blank"><i class="fab fa-github"></i> Github</a>
+        <p><a href="https://github.com/vipul-dalal/MiscellaneousImage-Detect" target="_blank"><i
+                    class="fab fa-github"></i> Github</a>
         </p>
         <p>Designed By <a href="https://www.instagram.com/code_with_vd/" target="_blank">Code_With_VD</a></p>
     </footer>
     <script src="image-slider.js"></script>
+    <script>
+        var cloneImg = document.querySelector('.slider').cloneNode(true);
+        document.querySelector('.slide-wrapper').appendChild(cloneImg);
+    </script>
 </body>
 
 </html>

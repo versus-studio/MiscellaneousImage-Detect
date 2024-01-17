@@ -60,5 +60,4 @@ function displayImage() {
         image.src = '';
         image.style.display = 'none';
     }
-}
-
+}s
